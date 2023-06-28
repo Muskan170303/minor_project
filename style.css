@@ -1,0 +1,198 @@
+@import url('https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 5rem;
+}
+
+body{
+    display: grid;
+    grid-template-columns:25% 75%;
+    gap:0;
+    /* padding: 10px; */
+}
+section h1{
+    width:100%;
+    height: 100vh;
+}
+.heading{
+    position: relative;
+    font-size: 2rem;
+    left: 50%;
+    padding: 10px;
+}
+.intro{
+    height: 100vh;
+}
+.left{
+    grid-column: 1;
+    display: flex;
+}
+.right{
+    grid-column: 2;
+}
+.head{
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-image:linear-gradient(45deg, 
+    #FBA92C 0%,#FBA92C 25%,#FBA92C 50%,#000000 75%,
+    #000000 100%) ;
+    margin-left: 2px;
+    border-bottom: 2px solid black;
+    z-index:100;
+}
+#initial_logo{
+    height: 60px;
+    display: flex;
+    justify-content: left;
+}
+.left img{
+    position: fixed;
+    height: 100vh;
+    width: 25.2%;
+    opacity:0.8 ;
+}
+.navbar{
+    display: flex;
+    justify-content: right;
+    background-color: transparent;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size:1.7em;
+    padding: 10px;
+}
+  
+a:hover {
+    color:#FBA92C;
+}
+
+.divi h2 {
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 200px;
+    writing-mode: vertical-lr;
+    align-self: center;
+    color: black;
+    line-height: .9;
+}
+  
+.divi .rotate {
+    color: white;
+    align-self: center;
+    transform: rotate(180deg);
+}
+  
+.divi{
+    display: grid;
+    height: 100vh;
+    position: fixed;
+    left: 23%;
+    grid-template-columns: max-content max-content;
+}
+.right p{
+    margin: 10%;
+}
+
+/*  contacts area */
+.contacts{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+.contacts p{
+    font-family: auto;
+    position: relative;
+    left: 20px;
+    font-size: 2em;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 30px 20px;
+    cursor: pointer;
+}
+ul li a {
+    text-decoration: none;
+}
+ul li a .fab{
+    font-size: 3em;
+    color: #444;
+}
+ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1) a::before {
+    content: "\f16d";
+    color: #dc2743;
+    border-bottom: 4px solid #dc2743;
+}
+ul li:nth-child(2) a::before {
+    content: "\f232";
+    color: #25D366;
+    border-bottom: 4px solid #25D366;
+}
+ul li:nth-child(3) a::before {
+    content: "\f099";
+    color: #1DA1F2;
+    border-bottom: 4px solid #1DA1F2;
+}
+ul li:hover a::before {
+    height: 100%;
+}
+
+span {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient(gold, gold);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+     transition: background-size .7s, background-position .5s ease-in-out;
+}
+  
+span:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+}
